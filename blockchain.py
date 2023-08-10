@@ -41,7 +41,7 @@ def base58(bytestring):
 
     # handle leading zeros
     for byte in bytestring:
-        if byte == 0:
+        if not byte:
             result += base58_characters[0]
         else:
             break
